@@ -72,33 +72,6 @@ These rules ensure the tree remains approximately balanced.
 
 ---
 
-## Compilation
-
-Compile with GCC:
-
-gcc -std=c11 -Wall -Wextra -pedantic -O2 rbtree.c -o rbtree
-
-Run:
-
-./rbtree
-
----
-
-## Example Usage
-
-RBTree *tree = rbt_create();
-
-rbt_insert(tree, 10);
-rbt_insert(tree, 20);
-rbt_insert(tree, 5);
-
-if (rbt_contains(tree, 20))
-    printf("Found\n");
-
-rbt_delete(tree, 10);
-
----
-
 ## Complexity
 
 Operation | Time Complexity
@@ -119,30 +92,3 @@ This project explores:
 - recursion
 - pointer-based data structures in C
 - algorithm correctness verification
-
----
-
-## Testing
-
-The program includes assert-based tests verifying:
-
-- tree structure validity
-- search correctness
-- deletion correctness
-- balancing invariants
-- node counts and height
-
-If all tests pass, the program outputs:
-
-All tests passed.
-
----
-
-## Future Improvements
-
-Possible extensions:
-
-- visualization of tree structure
-- generic key/value support
-- iterator interface
-- benchmarking vs AVL trees
